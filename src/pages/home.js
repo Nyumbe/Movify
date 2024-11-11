@@ -14,7 +14,7 @@ const Home = () => {
 
     const handleSearch = async (e) => {
         e.preventDefault();
-        const response = await axios.get(`https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&query=${searchTerm.current.value}&page=${page}&include_adult=false`);
+        const response = await axios.get(`https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=${searchTerm.current.value}&page=${page}&include_adult=false`);
         setMovies(response.data.results);
     };
 

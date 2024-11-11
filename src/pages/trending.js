@@ -13,7 +13,7 @@ const Trending = () => {
     useEffect(() => {
         const fetchMovies = async () => {
             try {
-                const response = await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_TMDB_API_KEY}&page=${page}`);
+                const response = await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}&page=${page}`);
                 setMovies(response.data.results);
                 console.log(`Page: ${page}`, response.data);
             } catch (e) {

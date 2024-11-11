@@ -16,7 +16,7 @@ const Detail = () => {
     useEffect(() => {
         const fetchDetails = async () => {
             const endpoint = mediaType === "tv" ? "tv" : "movie";
-            const response = await fetch(`https://api.themoviedb.org/3/${endpoint}/${id}?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US`);
+            const response = await fetch(`https://api.themoviedb.org/3/${endpoint}/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
             const data = await response.json();
             setSelected({...data,
                 genres: data.genres});
